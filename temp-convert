@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner (System.in);
+    String [] player_choices = {"FC", "CF", "FK", "CK"};
+    System.out.println("Choose one of the four options (FC = Fahrenheit-Celcius, CF = Celcius-Fahrenheit, FK = Fahrenheit-Kelvin, CK = Celcius-Kelvin");
+    String player_choice = scanner.nextLine().toUpperCase();
+
+    if (player_choice.equals(player_choices[0])) {
+      System.out.println("Enter your fahrenheit value");
+      double F = scanner.nextDouble();
+      System.out.println(((F-32)*5)/9);
+    }
+
+    if (player_choice.equals(player_choices[1])) {
+      System.out.println("Enter your Celcius value");
+      double C = scanner.nextDouble();
+      System.out.println(C*9/5+32);
+    }
+
+    if (player_choice.equals(player_choices[2])) {
+      System.out.println("Enter your Fahrenheit value");
+      double F = scanner.nextDouble();
+      System.out.println((F-32)/1.8 + 273.15);
+    }
+
+    if (player_choice.equals(player_choices[3])) {
+      System.out.println("Enter your Celcius value");
+      double C = scanner.nextDouble();
+      System.out.println(C+273.15);
+    }
